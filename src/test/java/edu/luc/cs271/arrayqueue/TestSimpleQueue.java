@@ -1,22 +1,23 @@
 package edu.luc.cs271.arrayqueue;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 public class TestSimpleQueue {
 
   private SimpleQueue<String> fixture;
 
-  @Before
+  @BeforeEach
   public void setUp() {
     fixture = new FixedArrayQueue<>(2);
   }
 
-  @After
+  @AfterEach
   public void tearDown() {
     fixture = null;
   }
@@ -115,7 +116,7 @@ public class TestSimpleQueue {
     fixture.offer(value2);
     final var list = fixture.asList();
     assertEquals(2, list.size());
-    assertEquals(Arrays.asList(value1, value2), list);
+    assertEquals(List.of(value1, value2), list);
   }
 
   @Test
@@ -130,6 +131,6 @@ public class TestSimpleQueue {
     final var list = fixture.asList();
     assertEquals(2, fixture.size());
     assertEquals(2, list.size());
-    assertEquals(Arrays.asList(value2, value3), list);
+    assertEquals(List.of(value2, value3), list);
   }
 }

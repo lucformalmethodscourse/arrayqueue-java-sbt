@@ -1,6 +1,6 @@
-name := "hello-java"
+name := "arrayqueue-java"
 
-version := "0.2"
+version := "0.3"
 
 compile / javacOptions += "-Xlint:all"
 
