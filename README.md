@@ -9,7 +9,7 @@ Collaborate with your teammates but submit individually. Clearly list the member
 An understanding of the following concepts and techniques:
 
 - ADT implementation perspective
-- queue ADT
+- queue ADT (see also [java.util.Queue](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html))
 - implementing queue as a circular array
 - queues with fixed versus growing capacity
 - algorithms based on the queue's FIFO policy
