@@ -23,6 +23,6 @@ jacocoReportSettings := JacocoReportSettings()
   )
   .withFormats(JacocoReportFormats.HTML)
 
-jacocoExcludes := Seq("**.Main*")
+jacocoExcludes := Seq("**.SingleQueueService*")
 
 enablePlugins(JavaAppPackaging)
