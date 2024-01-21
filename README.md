@@ -1,8 +1,8 @@
-# Loyola COMP 271 Lab 8: array-based queues
+# Loyola COMP 271 Project 6: array-based queues
 
-## Individual activity
+## Group activity
 
-Collaborate with your teammates but submit individually. Clearly list the members of your team.
+In this activity, we'll implement our own array-based data structure, a fixed-size circular queue!
 
 # Objectives
 
@@ -14,6 +14,7 @@ An understanding of the following concepts and techniques:
 - queues with fixed versus growing capacity
 - algorithms based on the queue's FIFO policy
 - interface-based testing
+- initial exposure to concurrency
 
 # Instructions
 
@@ -33,13 +34,15 @@ By entering customers' names at different rates, try to create scenarios where c
    - What happens when you poll an empty `FixedArrayQueue`?
    - What is the time and (extra) space complexity of each of the `FixedArrayQueue` methods?
 
-# Grading (SP22 - total 3.5 points)
+# Running the code
 
-- 2 completion of items marked TODO in `FixedArrayQueue` and tests passing
-- 0.5 completion of `SingleQueueService` and correct behavior
-- 1 written part
-  - 0.8 responses to the questions above
-  - 0.2 grammar, style, formatting
+To run the tests, please press the green "run" button or, in a Replit Shell window, run
+
+    mvn test
+
+To run the main program, in a Replit Shell window, run
+
+    mvn exec:java
 
 # Grading (total 5 points)
 
@@ -51,4 +54,6 @@ By entering customers' names at different rates, try to create scenarios where c
 
 # References
 
-- [Implementing a Queue using a circular array](http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/8-List/array-queue2.html)
+- [java.util.Queue interface](https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/Queue.html)
+- [Introduction and Array Implementation of Circular Queue](https://www.geeksforgeeks.org/introduction-and-array-implementation-of-circular-queue)
+- [Zombies testing with circular queue/buffer example](http://blog.wingman-sw.com/tdd-guided-by-zombies)
