@@ -22,9 +22,12 @@ public class TestSimpleQueue {
     fixture = null;
   }
 
-  @Test(expected = IllegalArgumentException.class)
+  @Test
   public void testNegativeCapacity() {
-    new FixedArrayQueue<>(-12);
+    assertThrows(
+      IllegalArgumentException.class,
+      () -> new FixedArrayQueue<>(-12)
+    );
   }
   
   @Test
