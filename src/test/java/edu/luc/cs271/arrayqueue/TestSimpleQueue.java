@@ -8,22 +8,22 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 
-public class TestSimpleQueue {
+class TestSimpleQueue {
 
   private SimpleQueue<String> fixture;
 
   @BeforeEach
-  public void setUp() {
+  void setUp() {
     fixture = new FixedArrayQueue<>(2);
   }
 
   @AfterEach
-  public void tearDown() {
+  void tearDown() {
     fixture = null;
   }
 
   @Test
-  public void testNegativeCapacity() {
+  void testNegativeCapacity() {
     assertThrows(
       IllegalArgumentException.class,
       () -> new FixedArrayQueue<>(-12)
@@ -31,7 +31,7 @@ public class TestSimpleQueue {
   }
   
   @Test
-  public void testInitial() {
+  void testInitial() {
     assertTrue(fixture.isEmpty());
     assertEquals(0, fixture.size());
     assertNull(fixture.peek());
@@ -39,7 +39,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testAfterOffer() {
+  void testAfterOffer() {
     final var value = "hello";
     assertTrue(fixture.offer(value));
     assertFalse(fixture.isEmpty());
@@ -48,7 +48,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testOfferThenPoll() {
+  void testOfferThenPoll() {
     final var value = "hello";
     assertTrue(fixture.offer(value));
     assertEquals(value, fixture.poll());
@@ -56,7 +56,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testOffer2ThenPoll2() {
+  void testOffer2ThenPoll2() {
     final var value1 = "hello";
     final var value2 = "world";
     assertTrue(fixture.offer(value1));
@@ -67,7 +67,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testOffer3Poll3() {
+  void testOffer3Poll3() {
     final var value1 = "hello";
     final var value2 = "world";
     final var value3 = "what";
@@ -81,7 +81,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testOffer5Poll5() {
+  void testOffer5Poll5() {
     final var value1 = "hello";
     final var value2 = "world";
     final var value3 = "what";
@@ -101,7 +101,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testOffer3() {
+  void testOffer3() {
     final var value1 = "hello";
     final var value2 = "world";
     final var value3 = "what";
@@ -112,12 +112,12 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testAsListEmpty() {
+  void testAsListEmpty() {
     assertEquals(0, fixture.asList().size());
   }
 
   @Test
-  public void testAsListNonempty() {
+  void testAsListNonempty() {
     final var value1 = "hello";
     final var value2 = "world";
     fixture.offer(value1);
@@ -128,7 +128,7 @@ public class TestSimpleQueue {
   }
 
   @Test
-  public void testAsListNonempty2() {
+  void testAsListNonempty2() {
     final var value1 = "hello";
     final var value2 = "world";
     final var value3 = "what";
